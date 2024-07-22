@@ -1628,6 +1628,52 @@
                   ]
                 }
               ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "THNK::StartServerCode"
+              },
+              "parameters": [
+                "",
+                ""
+              ]
+            }
+          ],
+          "actions": [],
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::ForEach",
+              "object": "player",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "StringObjectVariable"
+                  },
+                  "parameters": [
+                    "player",
+                    "Owner",
+                    "!=",
+                    "P2P::GetID()"
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "ActivateBehavior"
+                  },
+                  "parameters": [
+                    "player",
+                    "ThirdPersonCamera",
+                    "no"
+                  ]
+                }
+              ]
             },
             {
               "type": "BuiltinCommonInstructions::ForEach",
@@ -1658,52 +1704,6 @@
                 }
               ]
             },
-            {
-              "type": "BuiltinCommonInstructions::ForEach",
-              "object": "player",
-              "conditions": [
-                {
-                  "type": {
-                    "value": "StringObjectVariable"
-                  },
-                  "parameters": [
-                    "player",
-                    "Owner",
-                    "!=",
-                    "P2P::GetID()"
-                  ]
-                }
-              ],
-              "actions": [
-                {
-                  "type": {
-                    "value": "ActivateBehavior"
-                  },
-                  "parameters": [
-                    "player",
-                    "ThirdPersonCamera",
-                    "no"
-                  ]
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [
-            {
-              "type": {
-                "value": "THNK::StartServerCode"
-              },
-              "parameters": [
-                "",
-                ""
-              ]
-            }
-          ],
-          "actions": [],
-          "events": [
             {
               "type": "BuiltinCommonInstructions::Standard",
               "conditions": [
