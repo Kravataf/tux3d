@@ -536,7 +536,7 @@
         "gridColor": 10401023,
         "gridAlpha": 0.8,
         "snap": true,
-        "zoomFactor": 0.1313882699635984,
+        "zoomFactor": 0.10416820751496565,
         "windowMask": false
       },
       "objectsGroups": [
@@ -3046,7 +3046,7 @@
         "gridColor": 10401023,
         "gridAlpha": 0.8,
         "snap": false,
-        "zoomFactor": 0.3797121001947938,
+        "zoomFactor": 0.43357743047023806,
         "windowMask": false
       },
       "objectsGroups": [],
