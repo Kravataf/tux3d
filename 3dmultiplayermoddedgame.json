@@ -25,7 +25,7 @@
     "author": "kravataf",
     "windowWidth": 1280,
     "windowHeight": 720,
-    "latestCompilationDirectory": "",
+    "latestCompilationDirectory": "C:\\Users\\creat\\Desktop\\tux3dweb\\0.0.1",
     "maxFPS": 60,
     "minFPS": 20,
     "verticalSync": false,
@@ -473,6 +473,24 @@
         "name": "8b33ab221257b074d1d967042ad1d9d0.png",
         "smoothed": true,
         "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "cobblestone (1).png",
+        "kind": "image",
+        "metadata": "",
+        "name": "cobblestone (1).png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "cobblestone (2).png",
+        "kind": "image",
+        "metadata": "",
+        "name": "cobblestone (2).png",
+        "smoothed": true,
+        "userAdded": true
       }
     ],
     "resourceFolders": []
@@ -504,7 +522,7 @@
         "gridColor": 10401023,
         "gridAlpha": 0.8,
         "snap": true,
-        "zoomFactor": 0.20220707303602042,
+        "zoomFactor": 0.26364576737708273,
         "windowMask": false
       },
       "objectsGroups": [
@@ -690,6 +708,77 @@
           "y": -350,
           "z": 400,
           "zOrder": 10,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "keepRatio": true,
+          "layer": "",
+          "name": "cobblestone2",
+          "persistentUuid": "13418058-d0a6-4749-a6d3-b81c2041bd5f",
+          "width": 0,
+          "x": 1000,
+          "y": 1000,
+          "z": -99,
+          "zOrder": 11,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 100,
+          "height": 1000,
+          "keepRatio": true,
+          "layer": "",
+          "name": "grass",
+          "persistentUuid": "bedb9b39-6d48-4916-ba29-ce00b21fbb29",
+          "width": 2000,
+          "x": 0,
+          "y": 1000,
+          "z": -100,
+          "zOrder": 1,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 100,
+          "height": 200,
+          "keepRatio": true,
+          "layer": "",
+          "name": "cobblestone",
+          "persistentUuid": "d0715336-5d10-4f4e-8f9e-5f285d9147dd",
+          "width": 200,
+          "x": 2000,
+          "y": 1800,
+          "z": -100,
+          "zOrder": 12,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 100,
+          "height": 800,
+          "keepRatio": true,
+          "layer": "",
+          "name": "grass",
+          "persistentUuid": "9bdf52b1-79e8-438c-8cf1-95762adab93a",
+          "width": 200,
+          "x": 2000,
+          "y": 1000,
+          "z": -100,
+          "zOrder": 13,
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
@@ -1080,6 +1169,41 @@
             "width": 100,
             "animations": []
           }
+        },
+        {
+          "assetStoreId": "",
+          "name": "cobblestone2",
+          "type": "Scene3D::Cube3DObject",
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "content": {
+            "width": 1000,
+            "height": 1000,
+            "depth": 100,
+            "enableTextureTransparency": true,
+            "facesOrientation": "Y",
+            "frontFaceResourceName": "cobblestone (2).png",
+            "backFaceResourceName": "",
+            "backFaceUpThroughWhichAxisRotation": "X",
+            "leftFaceResourceName": "",
+            "rightFaceResourceName": "",
+            "topFaceResourceName": "",
+            "bottomFaceResourceName": "",
+            "frontFaceVisible": true,
+            "backFaceVisible": false,
+            "leftFaceVisible": false,
+            "rightFaceVisible": false,
+            "topFaceVisible": false,
+            "bottomFaceVisible": false,
+            "frontFaceResourceRepeat": false,
+            "backFaceResourceRepeat": false,
+            "leftFaceResourceRepeat": false,
+            "rightFaceResourceRepeat": false,
+            "topFaceResourceRepeat": false,
+            "bottomFaceResourceRepeat": false,
+            "materialType": "Basic"
+          }
         }
       ],
       "objectsFolderStructure": {
@@ -1090,6 +1214,9 @@
           },
           {
             "objectName": "cobblestone"
+          },
+          {
+            "objectName": "cobblestone2"
           },
           {
             "objectName": "stone_wall"
