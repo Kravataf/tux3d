@@ -12,7 +12,7 @@
     "antialisingEnabledOnMobile": false,
     "folderProject": false,
     "orientation": "landscape",
-    "packageName": "com.example.gamename",
+    "packageName": "net.game.tux3d",
     "pixelsRounding": false,
     "projectUuid": "02b763e4-5761-4f6c-be0a-e2ae6bcd2fe0",
     "scaleMode": "linear",
