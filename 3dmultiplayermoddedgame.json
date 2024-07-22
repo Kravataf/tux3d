@@ -529,7 +529,7 @@
         "gridColor": 10401023,
         "gridAlpha": 0.8,
         "snap": true,
-        "zoomFactor": 0.11131182576837179,
+        "zoomFactor": 0.3797121001947997,
         "windowMask": false
       },
       "objectsGroups": [
@@ -857,6 +857,22 @@
           "y": -1000,
           "z": 200,
           "zOrder": 14,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "keepRatio": true,
+          "layer": "hud",
+          "name": "pos",
+          "persistentUuid": "4e8c7ccd-95a9-4b86-9a41-e1a5b5f4f801",
+          "width": 0,
+          "x": 0,
+          "y": -300,
+          "zOrder": 15,
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
@@ -1304,6 +1320,47 @@
             "width": 99999.97690320062,
             "animations": []
           }
+        },
+        {
+          "assetStoreId": "",
+          "bold": false,
+          "italic": false,
+          "name": "pos",
+          "smoothed": true,
+          "type": "TextObject::Text",
+          "underlined": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "string": "0, 0, 0",
+          "font": "",
+          "textAlignment": "left",
+          "characterSize": 20,
+          "color": {
+            "b": 0,
+            "g": 0,
+            "r": 0
+          },
+          "content": {
+            "bold": false,
+            "isOutlineEnabled": false,
+            "isShadowEnabled": false,
+            "italic": false,
+            "outlineColor": "255;255;255",
+            "outlineThickness": 2,
+            "shadowAngle": 90,
+            "shadowBlurRadius": 2,
+            "shadowColor": "0;0;0",
+            "shadowDistance": 4,
+            "shadowOpacity": 127,
+            "smoothed": true,
+            "underlined": false,
+            "text": "0, 0, 0",
+            "font": "",
+            "textAlignment": "left",
+            "characterSize": 20,
+            "color": "0;0;0"
+          }
         }
       ],
       "objectsFolderStructure": {
@@ -1338,6 +1395,9 @@
           },
           {
             "objectName": "skybox"
+          },
+          {
+            "objectName": "pos"
           }
         ]
       },
@@ -1831,7 +1891,7 @@
                     "value": "MettreY"
                   },
                   "parameters": [
-                    "fps",
+                    "pos",
                     "=",
                     "server_id.Height()+id.Height()"
                   ]
@@ -1855,6 +1915,46 @@
                     "Text",
                     "=",
                     "THNK_P2P::ServerID()"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "MettreY"
+                  },
+                  "parameters": [
+                    "fps",
+                    "=",
+                    "server_id.Height()+id.Height()+pos.Height()"
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::ForEach",
+              "object": "player",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "StringObjectVariable"
+                  },
+                  "parameters": [
+                    "player",
+                    "Owner",
+                    "=",
+                    "P2P::GetID()"
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "TextContainerCapability::TextContainerBehavior::SetValue"
+                  },
+                  "parameters": [
+                    "pos",
+                    "Text",
+                    "=",
+                    "ToString(player.X()) +\", \"+ToString(player.Object3D::Z())+\", \"+ToString(player.Y())"
                   ]
                 }
               ]
