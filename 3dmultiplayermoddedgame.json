@@ -529,7 +529,7 @@
         "gridColor": 10401023,
         "gridAlpha": 0.8,
         "snap": true,
-        "zoomFactor": 0.10416820751496565,
+        "zoomFactor": 0.24672586957406628,
         "windowMask": false
       },
       "objectsGroups": [
@@ -621,7 +621,7 @@
           "initialVariables": []
         },
         {
-          "angle": 0,
+          "angle": 22,
           "customSize": true,
           "depth": 300,
           "height": 500,
@@ -686,7 +686,7 @@
           "initialVariables": []
         },
         {
-          "angle": 0,
+          "angle": 22,
           "customSize": true,
           "depth": 200,
           "height": 500,
@@ -694,8 +694,8 @@
           "name": "roof",
           "persistentUuid": "300261dd-f896-48e4-9009-04cf28233236",
           "width": 200,
-          "x": 2150,
-          "y": 2450,
+          "x": 2157,
+          "y": 2413,
           "z": 400,
           "zOrder": 10,
           "numberProperties": [],
@@ -703,7 +703,7 @@
           "initialVariables": []
         },
         {
-          "angle": 180,
+          "angle": 202,
           "customSize": true,
           "depth": 200,
           "height": 500,
@@ -711,8 +711,8 @@
           "name": "roof",
           "persistentUuid": "103f539e-f54d-404f-8bf0-a3ee82544133",
           "width": 200,
-          "x": 2350,
-          "y": 2450,
+          "x": 2343,
+          "y": 2487,
           "z": 400,
           "zOrder": 10,
           "numberProperties": [],
@@ -1343,7 +1343,6 @@
       },
       "events": [
         {
-          "folded": true,
           "type": "BuiltinCommonInstructions::Standard",
           "conditions": [
             {
@@ -1969,7 +1968,26 @@
                     "ThirdPersonCamera",
                     "yes"
                   ]
-                },
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::ForEach",
+              "object": "player",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "StringObjectVariable"
+                  },
+                  "parameters": [
+                    "player",
+                    "Owner",
+                    "=",
+                    "P2P::GetID()"
+                  ]
+                }
+              ],
+              "actions": [
                 {
                   "type": {
                     "value": "MettreXY"
