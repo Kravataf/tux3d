@@ -25,7 +25,7 @@
     "author": "kravataf",
     "windowWidth": 1280,
     "windowHeight": 720,
-    "latestCompilationDirectory": "C:\\Users\\creat\\Desktop\\tux3dweb\\0.0.1",
+    "latestCompilationDirectory": "C:\\Users\\creat\\Desktop\\tux3dweb\\0.0.2",
     "maxFPS": 60,
     "minFPS": 20,
     "verticalSync": false,
@@ -491,6 +491,20 @@
         "name": "stktex_generic_stoneWallA2.png4",
         "smoothed": true,
         "userAdded": true
+      },
+      {
+        "file": "roofmesh4.glb",
+        "kind": "model3D",
+        "metadata": "",
+        "name": "roofmesh4.glb",
+        "userAdded": true
+      },
+      {
+        "file": "free_-_skybox_basic_sky.glb",
+        "kind": "model3D",
+        "metadata": "",
+        "name": "free_-_skybox_basic_sky.glb",
+        "userAdded": true
       }
     ],
     "resourceFolders": []
@@ -522,7 +536,7 @@
         "gridColor": 10401023,
         "gridAlpha": 0.8,
         "snap": true,
-        "zoomFactor": 0.2308918338522514,
+        "zoomFactor": 0.1313882699635984,
         "windowMask": false
       },
       "objectsGroups": [
@@ -835,6 +849,24 @@
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 1000.0002523276856,
+          "height": 1000.0003715369803,
+          "keepRatio": true,
+          "layer": "",
+          "name": "skybox",
+          "persistentUuid": "2f97bfdc-a1b6-476d-9ba3-276e16c4f776",
+          "width": 1000,
+          "x": 1800,
+          "y": -1000,
+          "z": 200,
+          "zOrder": 14,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
         }
       ],
       "objects": [
@@ -975,9 +1007,9 @@
               "Distance": 500,
               "OffsetX": 0,
               "OffsetY": 0,
-              "OffsetZ": 0,
+              "OffsetZ": 50,
               "RotationAngleOffset": 0,
-              "ElevationAngleOffset": 20,
+              "ElevationAngleOffset": 0,
               "FollowFreeAreaZMax": 0,
               "FollowFreeAreaZMin": 0,
               "RotationLogSpeed": 2.0247e-320,
@@ -1214,7 +1246,7 @@
             "height": 100,
             "keepAspectRatio": true,
             "materialType": "StandardWithoutMetalness",
-            "modelResourceName": "roofmesh3.glb",
+            "modelResourceName": "roofmesh4.glb",
             "originLocation": "ModelOrigin",
             "rotationX": 180,
             "rotationY": 0,
@@ -1257,6 +1289,28 @@
             "bottomFaceResourceRepeat": false,
             "materialType": "Basic"
           }
+        },
+        {
+          "assetStoreId": "",
+          "name": "skybox",
+          "type": "Scene3D::Model3DObject",
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "content": {
+            "centerLocation": "ModelOrigin",
+            "depth": 100000.00213596332,
+            "height": 100000.01405689007,
+            "keepAspectRatio": true,
+            "materialType": "KeepOriginal",
+            "modelResourceName": "free_-_skybox_basic_sky.glb",
+            "originLocation": "ModelOrigin",
+            "rotationX": 90,
+            "rotationY": 0,
+            "rotationZ": 0,
+            "width": 99999.97690320062,
+            "animations": []
+          }
         }
       ],
       "objectsFolderStructure": {
@@ -1288,6 +1342,9 @@
           },
           {
             "objectName": "roof"
+          },
+          {
+            "objectName": "skybox"
           }
         ]
       },
@@ -1808,6 +1865,43 @@
                   ]
                 }
               ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "DepartScene"
+                  },
+                  "parameters": [
+                    ""
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "ResizableCapability::ResizableBehavior::SetSize"
+                  },
+                  "parameters": [
+                    "skybox",
+                    "Resizable",
+                    "10000",
+                    "10000"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Scene3D::Base3DBehavior::SetDepth"
+                  },
+                  "parameters": [
+                    "skybox",
+                    "Object3D",
+                    "=",
+                    "10000"
+                  ]
+                }
+              ]
             }
           ]
         },
@@ -1880,6 +1974,29 @@
                     "player",
                     "ThirdPersonCamera",
                     "yes"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "MettreXY"
+                  },
+                  "parameters": [
+                    "skybox",
+                    "=",
+                    "player.X()",
+                    "=",
+                    "player.Y()"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Scene3D::Base3DBehavior::SetZ"
+                  },
+                  "parameters": [
+                    "skybox",
+                    "Object3D",
+                    "=",
+                    "player.Object3D::Z()"
                   ]
                 }
               ]
