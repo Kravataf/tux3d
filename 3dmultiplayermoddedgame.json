@@ -432,13 +432,6 @@
         "userAdded": true
       },
       {
-        "file": "roofmesh3.glb",
-        "kind": "model3D",
-        "metadata": "",
-        "name": "roofmesh3.glb",
-        "userAdded": false
-      },
-      {
         "alwaysLoaded": false,
         "file": "assets/background.png",
         "kind": "image",
