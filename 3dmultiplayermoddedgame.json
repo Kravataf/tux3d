@@ -1930,6 +1930,7 @@
               ]
             },
             {
+              "disabled": true,
               "type": "BuiltinCommonInstructions::ForEach",
               "object": "player",
               "conditions": [
@@ -1945,6 +1946,11 @@
                   ]
                 }
               ],
+              "actions": []
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [],
               "actions": [
                 {
                   "type": {
