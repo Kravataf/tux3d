@@ -4,4 +4,4 @@ tux3d is an open-source 3d multiplayer game built using Gdevelop and THNK Framew
 
 # contributors
 
-<td align="center" valign="top" width="14.28%"><a href="https://github.com/Kravataf"><img src="https://avatars.githubusercontent.com/u/159631603?v=4" width="100px;" alt="Kravataf" style="max-width: 100%;"><br><sub><b>Kravataf</b></sub></a><br><a href="" <a href=""  title="Creator">✨</a> <a href="" title="Code">💻</a></td>
+<td align="center" valign="top" width="14.28%"><a href="https://github.com/Kravataf"><img src="https://avatars.githubusercontent.com/u/159631603?v=4" width="100px;" alt="Kravataf" style="max-width: 100%;"><br><sub><b>Kravataf</b></sub></a><br><a href="" <a href=""  title="Creator">✨</a> <a href="" title="Code">💻</a> <a href="" title="Documentation">📖</a></td>
