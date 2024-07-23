@@ -525,6 +525,27 @@
         "name": "sendMsg Idle2",
         "smoothed": true,
         "userAdded": true
+      },
+      {
+        "file": "Tree3.glb",
+        "kind": "model3D",
+        "metadata": "",
+        "name": "Tree3.glb",
+        "userAdded": true
+      },
+      {
+        "file": "palm.glb",
+        "kind": "model3D",
+        "metadata": "",
+        "name": "palm.glb",
+        "userAdded": true
+      },
+      {
+        "file": "tree.glb",
+        "kind": "model3D",
+        "metadata": "",
+        "name": "tree.glb",
+        "userAdded": true
       }
     ],
     "resourceFolders": []
@@ -556,7 +577,7 @@
         "gridColor": 10401023,
         "gridAlpha": 0.8,
         "snap": true,
-        "zoomFactor": 0.1603152880454696,
+        "zoomFactor": 0.46331118245140723,
         "windowMask": false
       },
       "objectsGroups": [
@@ -989,6 +1010,38 @@
           "x": 400,
           "y": -1000,
           "zOrder": 20,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "keepRatio": true,
+          "layer": "",
+          "name": "palmTree",
+          "persistentUuid": "9227eba3-dd38-4839-b21f-4b8b62d82b4d",
+          "width": 0,
+          "x": 750,
+          "y": -120,
+          "zOrder": 21,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "keepRatio": true,
+          "layer": "",
+          "name": "tree",
+          "persistentUuid": "8378aade-1f8a-4bed-97a5-dbcbdee29ae3",
+          "width": 0,
+          "x": 380,
+          "y": -120,
+          "zOrder": 22,
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
@@ -1699,6 +1752,50 @@
               "width": 256
             }
           }
+        },
+        {
+          "assetStoreId": "",
+          "name": "palmTree",
+          "type": "Scene3D::Model3DObject",
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "content": {
+            "centerLocation": "BottomCenterZ",
+            "depth": 486.7815226316452,
+            "height": 239.24784660339364,
+            "keepAspectRatio": true,
+            "materialType": "StandardWithoutMetalness",
+            "modelResourceName": "palm.glb",
+            "originLocation": "BottomCenterZ",
+            "rotationX": 90,
+            "rotationY": 0,
+            "rotationZ": 0,
+            "width": 300.25733709335327,
+            "animations": []
+          }
+        },
+        {
+          "assetStoreId": "",
+          "name": "tree",
+          "type": "Scene3D::Model3DObject",
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "content": {
+            "centerLocation": "BottomCenterZ",
+            "depth": 486.7815226316452,
+            "height": 239.24784660339364,
+            "keepAspectRatio": true,
+            "materialType": "StandardWithoutMetalness",
+            "modelResourceName": "tree.glb",
+            "originLocation": "BottomCenterZ",
+            "rotationX": 90,
+            "rotationY": 0,
+            "rotationZ": 0,
+            "width": 300.25733709335327,
+            "animations": []
+          }
         }
       ],
       "objectsFolderStructure": {
@@ -1751,6 +1848,12 @@
           },
           {
             "objectName": "sendMsg"
+          },
+          {
+            "objectName": "palmTree"
+          },
+          {
+            "objectName": "tree"
           }
         ]
       },
