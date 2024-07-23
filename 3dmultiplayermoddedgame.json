@@ -25,7 +25,7 @@
     "author": "kravataf",
     "windowWidth": 1280,
     "windowHeight": 720,
-    "latestCompilationDirectory": "C:\\Users\\creat\\Desktop\\tux3dweb\\0.0.3",
+    "latestCompilationDirectory": "C:\\Users\\creat\\Desktop\\tux3dweb\\0.0.4",
     "maxFPS": 60,
     "minFPS": 20,
     "verticalSync": false,
@@ -2472,12 +2472,13 @@
               "conditions": [
                 {
                   "type": {
-                    "value": "THNK::UseLinkedObjects"
+                    "value": "BooleanObjectVariable"
                   },
                   "parameters": [
-                    "RedHero",
                     "player",
-                    "="
+                    "PlayerState.Own",
+                    "True",
+                    ""
                   ]
                 }
               ],
@@ -2491,48 +2492,6 @@
                     "social.username",
                     "=",
                     "currentUsername.Text::Value()"
-                  ]
-                }
-              ]
-            },
-            {
-              "type": "BuiltinCommonInstructions::ForEach",
-              "object": "player",
-              "conditions": [
-                {
-                  "type": {
-                    "value": "StringObjectVariable"
-                  },
-                  "parameters": [
-                    "player",
-                    "Owner",
-                    "=",
-                    "P2P::GetID()"
-                  ]
-                }
-              ],
-              "actions": [
-                {
-                  "type": {
-                    "value": "MettreXY"
-                  },
-                  "parameters": [
-                    "skybox",
-                    "=",
-                    "player.X()",
-                    "=",
-                    "player.Y()"
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "Scene3D::Base3DBehavior::SetZ"
-                  },
-                  "parameters": [
-                    "skybox",
-                    "Object3D",
-                    "=",
-                    "player.Object3D::Z()"
                   ]
                 }
               ]
@@ -2596,6 +2555,29 @@
                         "player",
                         "ThirdPersonCamera",
                         "yes"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "MettreXY"
+                      },
+                      "parameters": [
+                        "skybox",
+                        "=",
+                        "player.X()",
+                        "=",
+                        "player.Y()"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "Scene3D::Base3DBehavior::SetZ"
+                      },
+                      "parameters": [
+                        "skybox",
+                        "Object3D",
+                        "=",
+                        "player.Object3D::Z()"
                       ]
                     }
                   ]
