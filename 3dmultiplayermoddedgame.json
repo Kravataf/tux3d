@@ -538,7 +538,7 @@
         "gridColor": 10401023,
         "gridAlpha": 0.8,
         "snap": true,
-        "zoomFactor": 0.2817259932079609,
+        "zoomFactor": 0.27253598967729803,
         "windowMask": false
       },
       "objectsGroups": [
@@ -557,7 +557,14 @@
           ]
         }
       ],
-      "variables": [],
+      "variables": [
+        {
+          "folded": true,
+          "name": "lastMsg",
+          "type": "string",
+          "value": ""
+        }
+      ],
       "instances": [
         {
           "angle": 0,
@@ -934,6 +941,39 @@
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "keepRatio": true,
+          "layer": "hud",
+          "name": "enterMsg",
+          "persistentUuid": "f6185a7b-0e98-4612-a548-8d1bc7477b19",
+          "width": 0,
+          "x": 0,
+          "y": -1000,
+          "zOrder": 19,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 48,
+          "height": 100,
+          "keepRatio": true,
+          "layer": "hud",
+          "name": "sendMsg",
+          "persistentUuid": "baac2f9f-b4c8-4275-ab41-6b57349050ac",
+          "width": 100,
+          "x": 400,
+          "y": -1000,
+          "zOrder": 20,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
         }
       ],
       "objects": [
@@ -984,6 +1024,7 @@
               "value": ""
             },
             {
+              "folded": true,
               "name": "input",
               "type": "structure",
               "children": [
@@ -1028,6 +1069,23 @@
                   "name": "w",
                   "type": "boolean",
                   "value": false
+                }
+              ]
+            },
+            {
+              "name": "social",
+              "type": "structure",
+              "children": [
+                {
+                  "folded": true,
+                  "name": "lastChatMsg",
+                  "type": "string",
+                  "value": ""
+                },
+                {
+                  "name": "username",
+                  "type": "string",
+                  "value": ""
                 }
               ]
             }
@@ -1499,6 +1557,112 @@
             "characterSize": 15,
             "color": "255;255;255"
           }
+        },
+        {
+          "assetStoreId": "",
+          "name": "enterMsg",
+          "type": "TextInput::TextInputObject",
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "content": {
+            "initialValue": "",
+            "placeholder": "type a message",
+            "fontResourceName": "",
+            "fontSize": 20,
+            "inputType": "text",
+            "textColor": "0;0;0",
+            "fillColor": "255;255;255",
+            "fillOpacity": 255,
+            "borderColor": "0;0;0",
+            "borderOpacity": 255,
+            "borderWidth": 1,
+            "readOnly": false,
+            "disabled": false
+          }
+        },
+        {
+          "assetStoreId": "bfab3a269992cf43081e2cb8053c28aaef11f2f9e0d0cbdc00207ea271f69c2c",
+          "name": "sendMsg",
+          "type": "PanelSpriteButton::PanelSpriteButton",
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "content": {
+            "LeftPadding": 16,
+            "RightPadding": 16,
+            "PressedLabelOffsetY": 10,
+            "BottomPadding": 32,
+            "TopPadding": 16,
+            "HoveredFadeOutDuration": 0.25
+          },
+          "childrenContent": {
+            "Hovered": {
+              "bottomMargin": 32,
+              "height": 106,
+              "leftMargin": 16,
+              "rightMargin": 16,
+              "texture": "Grey Button_Hovered.png",
+              "tiled": true,
+              "topMargin": 16,
+              "width": 256
+            },
+            "Idle": {
+              "bottomMargin": 32,
+              "height": 106,
+              "leftMargin": 16,
+              "rightMargin": 16,
+              "texture": "Grey Button_Idle.png",
+              "tiled": true,
+              "topMargin": 16,
+              "width": 256
+            },
+            "Label": {
+              "bold": false,
+              "italic": false,
+              "smoothed": true,
+              "underlined": false,
+              "string": "send",
+              "font": "",
+              "textAlignment": "center",
+              "characterSize": 15,
+              "color": {
+                "b": 79,
+                "g": 72,
+                "r": 72
+              },
+              "content": {
+                "bold": false,
+                "isOutlineEnabled": false,
+                "isShadowEnabled": false,
+                "italic": false,
+                "outlineColor": "255;255;255",
+                "outlineThickness": 2,
+                "shadowAngle": 90,
+                "shadowBlurRadius": 2,
+                "shadowColor": "0;0;0",
+                "shadowDistance": 4,
+                "shadowOpacity": 127,
+                "smoothed": true,
+                "underlined": false,
+                "text": "send",
+                "font": "",
+                "textAlignment": "center",
+                "characterSize": 15,
+                "color": "72;72;79"
+              }
+            },
+            "Pressed": {
+              "bottomMargin": 16,
+              "height": 106,
+              "leftMargin": 16,
+              "rightMargin": 16,
+              "texture": "Grey Button_Pressed.png",
+              "tiled": true,
+              "topMargin": 32,
+              "width": 256
+            }
+          }
         }
       ],
       "objectsFolderStructure": {
@@ -1544,7 +1708,13 @@
             "objectName": "currentUsername"
           },
           {
+            "objectName": "enterMsg"
+          },
+          {
             "objectName": "chat"
+          },
+          {
+            "objectName": "sendMsg"
           }
         ]
       },
@@ -1986,6 +2156,51 @@
             },
             {
               "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "PanelSpriteButton::PanelSpriteButton::IsPressed"
+                  },
+                  "parameters": [
+                    "sendMsg",
+                    ""
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "THNK::SendMessage"
+                  },
+                  "parameters": [
+                    "",
+                    "\"chatMessage\"",
+                    "lastMsg",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Wait"
+                  },
+                  "parameters": [
+                    "0.2"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetStringVariable"
+                  },
+                  "parameters": [
+                    "lastMsg",
+                    "=",
+                    "currentUsername.Text::Value()+\": \"+enterMsg.Text::Value()"
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
               "conditions": [],
               "actions": [
                 {
@@ -2083,7 +2298,7 @@
                     "=",
                     "0",
                     "=",
-                    "SceneWindowHeight()-chatBG.Height()"
+                    "SceneWindowHeight()-chatBG.Height()-enterMsg.Height()"
                   ]
                 },
                 {
@@ -2125,11 +2340,57 @@
                     "value": "MettreXY"
                   },
                   "parameters": [
+                    "enterMsg",
+                    "=",
+                    "0",
+                    "=",
+                    "SceneWindowHeight()-enterMsg.Height()"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "MettreXY"
+                  },
+                  "parameters": [
                     "chat",
                     "=",
                     "0",
                     "=",
-                    "SceneWindowHeight()-chatBG.Height()"
+                    "SceneWindowHeight()-chatBG.Height()-enterMsg.Height()"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ResizableCapability::ResizableBehavior::SetSize"
+                  },
+                  "parameters": [
+                    "enterMsg",
+                    "Resizable",
+                    "chatBG.Width()-chatBG.Width()/4",
+                    "chatBG.Height()/5"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "MettreXY"
+                  },
+                  "parameters": [
+                    "sendMsg",
+                    "=",
+                    "enterMsg.Width()",
+                    "=",
+                    "enterMsg.Y()"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ResizableCapability::ResizableBehavior::SetSize"
+                  },
+                  "parameters": [
+                    "sendMsg",
+                    "Resizable",
+                    "chatBG.Width()/4",
+                    "chatBG.Height()/5"
                   ]
                 }
               ]
@@ -2166,6 +2427,35 @@
                     "Text",
                     "=",
                     "ToString(player.X()) +\", \"+ToString(player.Object3D::Z())+\", \"+ToString(player.Y())"
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::ForEach",
+              "object": "player",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "THNK::UseLinkedObjects"
+                  },
+                  "parameters": [
+                    "RedHero",
+                    "player",
+                    "="
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "SetStringObjectVariable"
+                  },
+                  "parameters": [
+                    "player",
+                    "social.username",
+                    "=",
+                    "currentUsername.Text::Value()"
                   ]
                 }
               ]
@@ -2445,6 +2735,48 @@
                     "player",
                     "ThirdPersonCamera",
                     ""
+                  ]
+                }
+              ]
+            },
+            {
+              "infiniteLoopWarning": true,
+              "type": "BuiltinCommonInstructions::While",
+              "whileConditions": [
+                {
+                  "type": {
+                    "value": "THNK::OnMessage"
+                  },
+                  "parameters": [
+                    "",
+                    "\"chatMessage\"",
+                    "lastMsg",
+                    ""
+                  ]
+                }
+              ],
+              "conditions": [
+                {
+                  "type": {
+                    "value": "THNK::UseLinkedObjects"
+                  },
+                  "parameters": [
+                    "RedHero",
+                    "player",
+                    "="
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "TextContainerCapability::TextContainerBehavior::SetValue"
+                  },
+                  "parameters": [
+                    "chat",
+                    "Text",
+                    "=",
+                    "lastMsg"
                   ]
                 }
               ]
