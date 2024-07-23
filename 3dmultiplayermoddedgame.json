@@ -538,7 +538,7 @@
         "gridColor": 10401023,
         "gridAlpha": 0.8,
         "snap": true,
-        "zoomFactor": 0.27253598967729803,
+        "zoomFactor": 0.23867758270258255,
         "windowMask": false
       },
       "objectsGroups": [
@@ -2417,6 +2417,11 @@
             {
               "type": "BuiltinCommonInstructions::Standard",
               "conditions": [],
+              "actions": []
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [],
               "actions": [
                 {
                   "type": {
@@ -2456,6 +2461,125 @@
                     "social.username",
                     "=",
                     "currentUsername.Text::Value()"
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::ForEach",
+              "object": "player",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "StringObjectVariable"
+                  },
+                  "parameters": [
+                    "player",
+                    "Owner",
+                    "=",
+                    "P2P::GetID()"
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "MettreXY"
+                  },
+                  "parameters": [
+                    "skybox",
+                    "=",
+                    "player.X()",
+                    "=",
+                    "player.Y()"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Scene3D::Base3DBehavior::SetZ"
+                  },
+                  "parameters": [
+                    "skybox",
+                    "Object3D",
+                    "=",
+                    "player.Object3D::Z()"
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "THNK::UseLinkedObjects"
+                  },
+                  "parameters": [
+                    "",
+                    "player",
+                    ""
+                  ]
+                }
+              ],
+              "actions": [],
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::ForEach",
+                  "object": "player",
+                  "conditions": [
+                    {
+                      "type": {
+                        "inverted": true,
+                        "value": "StringObjectVariable"
+                      },
+                      "parameters": [
+                        "player",
+                        "Owner",
+                        "=",
+                        "P2P::GetID()"
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "ActivateBehavior"
+                      },
+                      "parameters": [
+                        "player",
+                        "ThirdPersonCamera",
+                        "no"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::ForEach",
+                  "object": "player",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "StringObjectVariable"
+                      },
+                      "parameters": [
+                        "player",
+                        "Owner",
+                        "=",
+                        "P2P::GetID()"
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "ActivateBehavior"
+                      },
+                      "parameters": [
+                        "player",
+                        "ThirdPersonCamera",
+                        "yes"
+                      ]
+                    }
                   ]
                 }
               ]
@@ -2525,106 +2649,6 @@
           ],
           "actions": [],
           "events": [
-            {
-              "type": "BuiltinCommonInstructions::ForEach",
-              "object": "player",
-              "conditions": [
-                {
-                  "type": {
-                    "value": "StringObjectVariable"
-                  },
-                  "parameters": [
-                    "player",
-                    "Owner",
-                    "!=",
-                    "P2P::GetID()"
-                  ]
-                }
-              ],
-              "actions": [
-                {
-                  "type": {
-                    "value": "ActivateBehavior"
-                  },
-                  "parameters": [
-                    "player",
-                    "ThirdPersonCamera",
-                    "no"
-                  ]
-                }
-              ]
-            },
-            {
-              "type": "BuiltinCommonInstructions::ForEach",
-              "object": "player",
-              "conditions": [
-                {
-                  "type": {
-                    "value": "StringObjectVariable"
-                  },
-                  "parameters": [
-                    "player",
-                    "Owner",
-                    "=",
-                    "P2P::GetID()"
-                  ]
-                }
-              ],
-              "actions": [
-                {
-                  "type": {
-                    "value": "ActivateBehavior"
-                  },
-                  "parameters": [
-                    "player",
-                    "ThirdPersonCamera",
-                    "yes"
-                  ]
-                }
-              ]
-            },
-            {
-              "type": "BuiltinCommonInstructions::ForEach",
-              "object": "player",
-              "conditions": [
-                {
-                  "type": {
-                    "value": "StringObjectVariable"
-                  },
-                  "parameters": [
-                    "player",
-                    "Owner",
-                    "=",
-                    "P2P::GetID()"
-                  ]
-                }
-              ],
-              "actions": [
-                {
-                  "type": {
-                    "value": "MettreXY"
-                  },
-                  "parameters": [
-                    "skybox",
-                    "=",
-                    "player.X()",
-                    "=",
-                    "player.Y()"
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "Scene3D::Base3DBehavior::SetZ"
-                  },
-                  "parameters": [
-                    "skybox",
-                    "Object3D",
-                    "=",
-                    "player.Object3D::Z()"
-                  ]
-                }
-              ]
-            },
             {
               "folded": true,
               "type": "BuiltinCommonInstructions::Standard",
@@ -2724,16 +2748,6 @@
                     "player",
                     "1038",
                     "164",
-                    ""
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "ActivateBehavior"
-                  },
-                  "parameters": [
-                    "player",
-                    "ThirdPersonCamera",
                     ""
                   ]
                 }
