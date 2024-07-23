@@ -507,6 +507,24 @@
         "name": "NewPanelSprite",
         "smoothed": true,
         "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/sendMsg Idle.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\",\"pskl\":{}}",
+        "name": "sendMsg Idle",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/sendMsg Idle2.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\",\"pskl\":{}}",
+        "name": "sendMsg Idle2",
+        "smoothed": true,
+        "userAdded": true
       }
     ],
     "resourceFolders": []
@@ -538,7 +556,7 @@
         "gridColor": 10401023,
         "gridAlpha": 0.8,
         "snap": true,
-        "zoomFactor": 0.1956110053676963,
+        "zoomFactor": 0.17130934511242177,
         "windowMask": false
       },
       "objectsGroups": [
@@ -1507,9 +1525,9 @@
             "fontResourceName": "",
             "fontSize": 20,
             "inputType": "text",
-            "textColor": "0;0;0",
-            "fillColor": "255;255;255",
-            "fillOpacity": 255,
+            "textColor": "255;255;255",
+            "fillColor": "0;0;0",
+            "fillOpacity": 200,
             "borderColor": "0;0;0",
             "borderOpacity": 255,
             "borderWidth": 1,
@@ -1571,9 +1589,9 @@
             "fontResourceName": "",
             "fontSize": 20,
             "inputType": "text",
-            "textColor": "0;0;0",
-            "fillColor": "255;255;255",
-            "fillOpacity": 255,
+            "textColor": "255;255;255",
+            "fillColor": "0;0;0",
+            "fillOpacity": 200,
             "borderColor": "0;0;0",
             "borderOpacity": 255,
             "borderWidth": 1,
@@ -1602,8 +1620,8 @@
               "height": 106,
               "leftMargin": 16,
               "rightMargin": 16,
-              "texture": "Grey Button_Hovered.png",
-              "tiled": true,
+              "texture": "sendMsg Idle2",
+              "tiled": false,
               "topMargin": 16,
               "width": 256
             },
@@ -1612,8 +1630,8 @@
               "height": 106,
               "leftMargin": 16,
               "rightMargin": 16,
-              "texture": "Grey Button_Idle.png",
-              "tiled": true,
+              "texture": "sendMsg Idle2",
+              "tiled": false,
               "topMargin": 16,
               "width": 256
             },
@@ -1627,9 +1645,9 @@
               "textAlignment": "center",
               "characterSize": 15,
               "color": {
-                "b": 79,
-                "g": 72,
-                "r": 72
+                "b": 255,
+                "g": 255,
+                "r": 255
               },
               "content": {
                 "bold": false,
@@ -1649,7 +1667,7 @@
                 "font": "",
                 "textAlignment": "center",
                 "characterSize": 15,
-                "color": "72;72;79"
+                "color": "255;255;255"
               }
             },
             "Pressed": {
@@ -1657,8 +1675,8 @@
               "height": 106,
               "leftMargin": 16,
               "rightMargin": 16,
-              "texture": "Grey Button_Pressed.png",
-              "tiled": true,
+              "texture": "sendMsg Idle2",
+              "tiled": false,
               "topMargin": 32,
               "width": 256
             }
