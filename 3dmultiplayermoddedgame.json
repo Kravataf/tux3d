@@ -2740,9 +2740,8 @@
               ]
             },
             {
-              "infiniteLoopWarning": true,
-              "type": "BuiltinCommonInstructions::While",
-              "whileConditions": [
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
                 {
                   "type": {
                     "value": "THNK::OnMessage"
@@ -2752,18 +2751,6 @@
                     "\"chatMessage\"",
                     "lastMsg",
                     ""
-                  ]
-                }
-              ],
-              "conditions": [
-                {
-                  "type": {
-                    "value": "THNK::UseLinkedObjects"
-                  },
-                  "parameters": [
-                    "RedHero",
-                    "player",
-                    "="
                   ]
                 }
               ],
@@ -2780,6 +2767,25 @@
                   ]
                 }
               ]
+            },
+            {
+              "disabled": true,
+              "infiniteLoopWarning": true,
+              "type": "BuiltinCommonInstructions::While",
+              "whileConditions": [],
+              "conditions": [
+                {
+                  "type": {
+                    "value": "THNK::UseLinkedObjects"
+                  },
+                  "parameters": [
+                    "RedHero",
+                    "player",
+                    "="
+                  ]
+                }
+              ],
+              "actions": []
             },
             {
               "infiniteLoopWarning": true,
