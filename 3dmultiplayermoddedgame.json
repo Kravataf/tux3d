@@ -556,7 +556,7 @@
         "gridColor": 10401023,
         "gridAlpha": 0.8,
         "snap": true,
-        "zoomFactor": 0.13138826996359895,
+        "zoomFactor": 0.1603152880454696,
         "windowMask": false
       },
       "objectsGroups": [
@@ -1116,6 +1116,12 @@
                   "name": "Own",
                   "type": "boolean",
                   "value": false
+                },
+                {
+                  "folded": true,
+                  "name": "z",
+                  "type": "number",
+                  "value": 0
                 }
               ]
             }
@@ -2426,25 +2432,6 @@
               ]
             },
             {
-              "disabled": true,
-              "type": "BuiltinCommonInstructions::ForEach",
-              "object": "player",
-              "conditions": [
-                {
-                  "type": {
-                    "value": "StringObjectVariable"
-                  },
-                  "parameters": [
-                    "player",
-                    "Owner",
-                    "=",
-                    "P2P::GetID()"
-                  ]
-                }
-              ],
-              "actions": []
-            },
-            {
               "type": "BuiltinCommonInstructions::ForEach",
               "object": "player",
               "conditions": [
@@ -2470,6 +2457,17 @@
                     "social.username",
                     "=",
                     "currentUsername.Text::Value()"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetNumberObjectVariable"
+                  },
+                  "parameters": [
+                    "player",
+                    "PlayerState.z",
+                    "=",
+                    "player.Object3D::Z()"
                   ]
                 },
                 {
