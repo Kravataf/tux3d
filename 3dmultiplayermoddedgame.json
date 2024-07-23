@@ -1106,6 +1106,18 @@
                   "value": ""
                 }
               ]
+            },
+            {
+              "name": "PlayerState",
+              "type": "structure",
+              "children": [
+                {
+                  "folded": true,
+                  "name": "Own",
+                  "type": "boolean",
+                  "value": false
+                }
+              ]
             }
           ],
           "effects": [],
@@ -2527,18 +2539,7 @@
             },
             {
               "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [
-                {
-                  "type": {
-                    "value": "THNK::UseLinkedObjects"
-                  },
-                  "parameters": [
-                    "",
-                    "player",
-                    ""
-                  ]
-                }
-              ],
+              "conditions": [],
               "actions": [],
               "events": [
                 {
@@ -2547,14 +2548,13 @@
                   "conditions": [
                     {
                       "type": {
-                        "inverted": true,
-                        "value": "StringObjectVariable"
+                        "value": "BooleanObjectVariable"
                       },
                       "parameters": [
                         "player",
-                        "Owner",
-                        "=",
-                        "P2P::GetID()"
+                        "PlayerState.Own",
+                        "False",
+                        ""
                       ]
                     }
                   ],
@@ -2577,13 +2577,13 @@
                   "conditions": [
                     {
                       "type": {
-                        "value": "StringObjectVariable"
+                        "value": "BooleanObjectVariable"
                       },
                       "parameters": [
                         "player",
-                        "Owner",
-                        "=",
-                        "P2P::GetID()"
+                        "PlayerState.Own",
+                        "True",
+                        ""
                       ]
                     }
                   ],
@@ -15098,6 +15098,16 @@
                     "Owner",
                     "=",
                     "THNK::PickedPlayer()"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetObjectVariableAsBoolean"
+                  },
+                  "parameters": [
+                    "Player",
+                    "PlayerState[THNK::PickedPlayer()].Own",
+                    "True"
                   ]
                 },
                 {
