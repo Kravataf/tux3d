@@ -2445,28 +2445,6 @@
               "actions": []
             },
             {
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [],
-              "actions": []
-            },
-            {
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [],
-              "actions": [
-                {
-                  "type": {
-                    "value": "TextContainerCapability::TextContainerBehavior::SetValue"
-                  },
-                  "parameters": [
-                    "pos",
-                    "Text",
-                    "=",
-                    "ToString(player.X()) +\", \"+ToString(player.Object3D::Z())+\", \"+ToString(player.Y())"
-                  ]
-                }
-              ]
-            },
-            {
               "type": "BuiltinCommonInstructions::ForEach",
               "object": "player",
               "conditions": [
@@ -2492,6 +2470,17 @@
                     "social.username",
                     "=",
                     "currentUsername.Text::Value()"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "TextContainerCapability::TextContainerBehavior::SetValue"
+                  },
+                  "parameters": [
+                    "pos",
+                    "Text",
+                    "=",
+                    "ToString(player.X()) +\", \"+ToString(player.Object3D::Z())+\", \"+ToString(player.Y())"
                   ]
                 }
               ]
