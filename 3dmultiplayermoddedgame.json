@@ -498,6 +498,15 @@
         "metadata": "",
         "name": "free_-_skybox_basic_sky.glb",
         "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/NewPanelSprite.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\",\"pskl\":{}}",
+        "name": "NewPanelSprite",
+        "smoothed": true,
+        "userAdded": true
       }
     ],
     "resourceFolders": []
@@ -529,7 +538,7 @@
         "gridColor": 10401023,
         "gridAlpha": 0.8,
         "snap": true,
-        "zoomFactor": 0.3797121001947997,
+        "zoomFactor": 0.2817259932079609,
         "windowMask": false
       },
       "objectsGroups": [
@@ -873,6 +882,55 @@
           "x": 0,
           "y": -300,
           "zOrder": 15,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 1,
+          "height": 400,
+          "keepRatio": true,
+          "layer": "hud",
+          "name": "chatBG",
+          "persistentUuid": "5a597b67-c31a-4e7b-9aca-e929b451d070",
+          "width": 400,
+          "x": 0,
+          "y": -800,
+          "zOrder": 16,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "keepRatio": true,
+          "layer": "hud",
+          "name": "currentUsername",
+          "persistentUuid": "29dc09a3-0586-4cc9-b8e8-b2ee9b9799e2",
+          "width": 0,
+          "x": 0,
+          "y": -900,
+          "zOrder": 17,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "keepRatio": true,
+          "layer": "hud",
+          "name": "chat",
+          "persistentUuid": "fd573fa9-91d1-4443-bb73-ec78521f17d1",
+          "width": 0,
+          "x": 0,
+          "y": -800,
+          "zOrder": 18,
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
@@ -1361,6 +1419,86 @@
             "characterSize": 20,
             "color": "0;0;0"
           }
+        },
+        {
+          "assetStoreId": "",
+          "bottomMargin": 0,
+          "height": 32,
+          "leftMargin": 0,
+          "name": "chatBG",
+          "rightMargin": 0,
+          "texture": "NewPanelSprite",
+          "tiled": true,
+          "topMargin": 0,
+          "type": "PanelSpriteObject::PanelSprite",
+          "width": 32,
+          "variables": [],
+          "effects": [],
+          "behaviors": []
+        },
+        {
+          "assetStoreId": "",
+          "name": "currentUsername",
+          "type": "TextInput::TextInputObject",
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "content": {
+            "initialValue": "player",
+            "placeholder": "enter username",
+            "fontResourceName": "",
+            "fontSize": 20,
+            "inputType": "text",
+            "textColor": "0;0;0",
+            "fillColor": "255;255;255",
+            "fillOpacity": 255,
+            "borderColor": "0;0;0",
+            "borderOpacity": 255,
+            "borderWidth": 1,
+            "readOnly": false,
+            "disabled": false
+          }
+        },
+        {
+          "assetStoreId": "",
+          "bold": false,
+          "italic": false,
+          "name": "chat",
+          "smoothed": true,
+          "type": "TextObject::Text",
+          "underlined": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "string": "player: message",
+          "font": "",
+          "textAlignment": "left",
+          "characterSize": 15,
+          "color": {
+            "b": 255,
+            "g": 255,
+            "r": 255
+          },
+          "content": {
+            "bold": false,
+            "isOutlineEnabled": false,
+            "isShadowEnabled": false,
+            "italic": false,
+            "outlineColor": "255;255;255",
+            "outlineThickness": 2,
+            "shadowAngle": 90,
+            "shadowBlurRadius": 2,
+            "shadowColor": "0;0;0",
+            "shadowDistance": 4,
+            "shadowOpacity": 127,
+            "smoothed": true,
+            "underlined": false,
+            "text": "player: message",
+            "font": "",
+            "textAlignment": "left",
+            "characterSize": 15,
+            "color": "255;255;255"
+          }
         }
       ],
       "objectsFolderStructure": {
@@ -1398,6 +1536,15 @@
           },
           {
             "objectName": "pos"
+          },
+          {
+            "objectName": "chatBG"
+          },
+          {
+            "objectName": "currentUsername"
+          },
+          {
+            "objectName": "chat"
           }
         ]
       },
@@ -1926,6 +2073,64 @@
                     "=",
                     "server_id.Height()+id.Height()+pos.Height()"
                   ]
+                },
+                {
+                  "type": {
+                    "value": "MettreXY"
+                  },
+                  "parameters": [
+                    "chatBG",
+                    "=",
+                    "0",
+                    "=",
+                    "SceneWindowHeight()-chatBG.Height()"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ResizableCapability::ResizableBehavior::SetSize"
+                  },
+                  "parameters": [
+                    "chatBG",
+                    "Resizable",
+                    "SceneWindowWidth()/4",
+                    "SceneWindowHeight()/3"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ResizableCapability::ResizableBehavior::SetSize"
+                  },
+                  "parameters": [
+                    "currentUsername",
+                    "Resizable",
+                    "chatBG.Width()",
+                    "chatBG.Height()/5"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "MettreXY"
+                  },
+                  "parameters": [
+                    "currentUsername",
+                    "=",
+                    "0",
+                    "=",
+                    "chatBG.Y()-currentUsername.Height()"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "MettreXY"
+                  },
+                  "parameters": [
+                    "chat",
+                    "=",
+                    "0",
+                    "=",
+                    "SceneWindowHeight()-chatBG.Height()"
+                  ]
                 }
               ]
             },
@@ -1998,6 +2203,17 @@
                     "Object3D",
                     "=",
                     "10000"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "OpacityCapability::OpacityBehavior::SetValue"
+                  },
+                  "parameters": [
+                    "chatBG",
+                    "Opacity",
+                    "=",
+                    "200"
                   ]
                 }
               ]
