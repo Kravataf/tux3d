@@ -546,6 +546,13 @@
         "metadata": "",
         "name": "tree.glb",
         "userAdded": true
+      },
+      {
+        "file": "SuperTux-Medium (1).ttf",
+        "kind": "font",
+        "metadata": "",
+        "name": "SuperTux-Medium (1).ttf",
+        "userAdded": true
       }
     ],
     "resourceFolders": []
@@ -3836,7 +3843,7 @@
         "gridColor": 10401023,
         "gridAlpha": 0.8,
         "snap": false,
-        "zoomFactor": 0.43357743047023806,
+        "zoomFactor": 0.4481978045410364,
         "windowMask": false
       },
       "objectsGroups": [],
@@ -4543,6 +4550,47 @@
               ]
             }
           ]
+        },
+        {
+          "assetStoreId": "",
+          "bold": false,
+          "italic": false,
+          "name": "ST_font",
+          "smoothed": true,
+          "type": "TextObject::Text",
+          "underlined": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "string": "Text",
+          "font": "SuperTux-Medium (1).ttf",
+          "textAlignment": "left",
+          "characterSize": 20,
+          "color": {
+            "b": 0,
+            "g": 0,
+            "r": 0
+          },
+          "content": {
+            "bold": false,
+            "isOutlineEnabled": false,
+            "isShadowEnabled": false,
+            "italic": false,
+            "outlineColor": "255;255;255",
+            "outlineThickness": 2,
+            "shadowAngle": 90,
+            "shadowBlurRadius": 2,
+            "shadowColor": "0;0;0",
+            "shadowDistance": 4,
+            "shadowOpacity": 127,
+            "smoothed": true,
+            "underlined": false,
+            "text": "Text",
+            "font": "SuperTux-Medium (1).ttf",
+            "textAlignment": "left",
+            "characterSize": 20,
+            "color": "0;0;0"
+          }
         }
       ],
       "objectsFolderStructure": {
@@ -4577,6 +4625,9 @@
           },
           {
             "objectName": "itch"
+          },
+          {
+            "objectName": "ST_font"
           }
         ]
       },
