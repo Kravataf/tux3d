@@ -510,27 +510,11 @@
       },
       {
         "alwaysLoaded": false,
-        "file": "assets/sendMsg Idle.png",
-        "kind": "image",
-        "metadata": "{\"extension\":\".png\",\"pskl\":{}}",
-        "name": "sendMsg Idle",
-        "smoothed": true,
-        "userAdded": true
-      },
-      {
-        "alwaysLoaded": false,
         "file": "assets/sendMsg Idle2.png",
         "kind": "image",
         "metadata": "{\"extension\":\".png\",\"pskl\":{}}",
         "name": "sendMsg Idle2",
         "smoothed": true,
-        "userAdded": true
-      },
-      {
-        "file": "Tree3.glb",
-        "kind": "model3D",
-        "metadata": "",
-        "name": "Tree3.glb",
         "userAdded": true
       },
       {
@@ -584,7 +568,7 @@
         "gridColor": 10401023,
         "gridAlpha": 0.8,
         "snap": true,
-        "zoomFactor": 0.09748304263251316,
+        "zoomFactor": 0.12710233719927042,
         "windowMask": false
       },
       "objectsGroups": [
@@ -2774,6 +2758,7 @@
           ]
         },
         {
+          "folded": true,
           "type": "BuiltinCommonInstructions::Standard",
           "conditions": [
             {
@@ -3885,7 +3870,7 @@
         "gridColor": 10401023,
         "gridAlpha": 0.8,
         "snap": false,
-        "zoomFactor": 0.4481978045410364,
+        "zoomFactor": 0.5653158055126322,
         "windowMask": false
       },
       "objectsGroups": [],
@@ -4034,6 +4019,22 @@
           "x": 1135,
           "y": 632,
           "zOrder": 8,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "keepRatio": true,
+          "layer": "",
+          "name": "untitled",
+          "persistentUuid": "3c443474-a977-4e01-acb4-4a8760dc0346",
+          "width": 0,
+          "x": 483,
+          "y": 39,
+          "zOrder": 9,
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
@@ -4633,6 +4634,89 @@
             "characterSize": 20,
             "color": "0;0;0"
           }
+        },
+        {
+          "assetStoreId": "bfab3a269992cf43081e2cb8053c28aaef11f2f9e0d0cbdc00207ea271f69c2c",
+          "name": "untitled",
+          "type": "PanelSpriteButton::PanelSpriteButton",
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "content": {
+            "LeftPadding": 16,
+            "RightPadding": 16,
+            "PressedLabelOffsetY": 10,
+            "BottomPadding": 32,
+            "TopPadding": 16,
+            "HoveredFadeOutDuration": 0.25
+          },
+          "childrenContent": {
+            "Hovered": {
+              "bottomMargin": 32,
+              "height": 106,
+              "leftMargin": 16,
+              "rightMargin": 16,
+              "texture": "Grey Button_Hovered.png",
+              "tiled": true,
+              "topMargin": 16,
+              "width": 256
+            },
+            "Idle": {
+              "bottomMargin": 32,
+              "height": 106,
+              "leftMargin": 16,
+              "rightMargin": 16,
+              "texture": "Grey Button_Idle.png",
+              "tiled": true,
+              "topMargin": 16,
+              "width": 256
+            },
+            "Label": {
+              "bold": false,
+              "italic": false,
+              "smoothed": true,
+              "underlined": false,
+              "string": "untitled",
+              "font": "",
+              "textAlignment": "center",
+              "characterSize": 60,
+              "color": {
+                "b": 79,
+                "g": 72,
+                "r": 72
+              },
+              "content": {
+                "bold": false,
+                "isOutlineEnabled": false,
+                "isShadowEnabled": false,
+                "italic": false,
+                "outlineColor": "255;255;255",
+                "outlineThickness": 2,
+                "shadowAngle": 90,
+                "shadowBlurRadius": 2,
+                "shadowColor": "0;0;0",
+                "shadowDistance": 4,
+                "shadowOpacity": 127,
+                "smoothed": true,
+                "underlined": false,
+                "text": "untitled",
+                "font": "",
+                "textAlignment": "center",
+                "characterSize": 60,
+                "color": "72;72;79"
+              }
+            },
+            "Pressed": {
+              "bottomMargin": 16,
+              "height": 106,
+              "leftMargin": 16,
+              "rightMargin": 16,
+              "texture": "Grey Button_Pressed.png",
+              "tiled": true,
+              "topMargin": 32,
+              "width": 256
+            }
+          }
         }
       ],
       "objectsFolderStructure": {
@@ -4643,6 +4727,9 @@
           },
           {
             "objectName": "join_server"
+          },
+          {
+            "objectName": "untitled"
           },
           {
             "objectName": "server_id"
@@ -4809,7 +4896,7 @@
                 "=",
                 "SceneWindowWidth()/2-host_server.Width()/2",
                 "=",
-                "SceneWindowHeight()/2-host_server.Height()"
+                "SceneWindowHeight()/2-host_server.Height()/2"
               ]
             },
             {
@@ -4821,7 +4908,7 @@
                 "=",
                 "SceneWindowWidth()/2-host_server.Width()/2",
                 "=",
-                "SceneWindowHeight()/2"
+                "SceneWindowHeight()/2+join_server.Height()/2"
               ]
             },
             {
@@ -4947,6 +5034,18 @@
                 "SceneWindowWidth()-github.Width()-itch.Width()",
                 "=",
                 "SceneWindowHeight()-github.Height()"
+              ]
+            },
+            {
+              "type": {
+                "value": "MettreXY"
+              },
+              "parameters": [
+                "untitled",
+                "=",
+                "SceneWindowWidth()/2-host_server.Width()/2",
+                "=",
+                "SceneWindowHeight() / 2 - host_server.Height() - untitled.Height() / 2"
               ]
             }
           ]
