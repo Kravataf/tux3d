@@ -963,7 +963,7 @@
         "gridColor": 10401023,
         "gridAlpha": 0.8,
         "snap": true,
-        "zoomFactor": 0.34375202416124473,
+        "zoomFactor": 0.3111974942445325,
         "windowMask": false
       },
       "objectsGroups": [
@@ -3042,6 +3042,22 @@
           "y": 50,
           "z": -50,
           "zOrder": 27,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "keepRatio": true,
+          "layer": "",
+          "name": "earth",
+          "persistentUuid": "04b56b46-c3db-4885-bfee-735b16c7eb76",
+          "width": 0,
+          "x": 1300,
+          "y": -100,
+          "zOrder": 28,
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
