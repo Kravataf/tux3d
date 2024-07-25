@@ -25,7 +25,7 @@
     "author": "kravataf",
     "windowWidth": 1280,
     "windowHeight": 720,
-    "latestCompilationDirectory": "C:\\Users\\creat\\Desktop\\tux3dweb\\0.0.5",
+    "latestCompilationDirectory": "C:\\Users\\creat\\Desktop\\tux3dweb\\0.0.6",
     "maxFPS": 60,
     "minFPS": 20,
     "verticalSync": false,
@@ -973,6 +973,19 @@
           "identifier": "https://asset-resources.gdevelop.io/public-resources/Settings UI/Slider/pixel art/848f861767e7ce4581dba9e122ee7bafeaca57987655cebe1f78ab31d1300f0f_Square White Slider Thumb.png",
           "name": "Square White Slider Thumb.png"
         }
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/LightGlow.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "LightGlow.png",
+        "smoothed": true,
+        "userAdded": false,
+        "origin": {
+          "identifier": "https://asset-resources.gdevelop.io/public-resources/3D Particles/c17e2d500015e598624b763f4942b26e3aac96efca094cd20257a61e15b27fcb_LightGlow.png",
+          "name": "LightGlow.png"
+        }
       }
     ],
     "resourceFolders": []
@@ -1004,7 +1017,7 @@
         "gridColor": 10401023,
         "gridAlpha": 0.8,
         "snap": true,
-        "zoomFactor": 0.09748304263251387,
+        "zoomFactor": 0.39251611754883464,
         "windowMask": false
       },
       "objectsGroups": [
