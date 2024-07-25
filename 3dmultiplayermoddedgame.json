@@ -915,6 +915,25 @@
         "name": "stktex_generic_earth_a.png2",
         "smoothed": true,
         "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "button (2).png",
+        "kind": "image",
+        "metadata": "",
+        "name": "button (2).png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "file": "assets/New sound effect.wav",
+        "kind": "audio",
+        "metadata": "{\"extension\":\".wav\",\"jfxr\":{\"data\":\"{\\\"_version\\\":1,\\\"_name\\\":\\\"Default 13\\\",\\\"_locked\\\":[],\\\"sampleRate\\\":44100,\\\"attack\\\":0,\\\"sustain\\\":0.11141455808481315,\\\"sustainPunch\\\":0,\\\"decay\\\":0,\\\"tremoloDepth\\\":0,\\\"tremoloFrequency\\\":10,\\\"frequency\\\":500,\\\"frequencySweep\\\":0,\\\"frequencyDeltaSweep\\\":0,\\\"repeatFrequency\\\":0,\\\"frequencyJump1Onset\\\":33,\\\"frequencyJump1Amount\\\":0,\\\"frequencyJump2Onset\\\":66,\\\"frequencyJump2Amount\\\":0,\\\"harmonics\\\":0,\\\"harmonicsFalloff\\\":0.5,\\\"waveform\\\":\\\"sine\\\",\\\"interpolateNoise\\\":true,\\\"vibratoDepth\\\":0,\\\"vibratoFrequency\\\":10,\\\"squareDuty\\\":50,\\\"squareDutySweep\\\":0,\\\"flangerOffset\\\":0,\\\"flangerOffsetSweep\\\":0,\\\"bitCrush\\\":16,\\\"bitCrushSweep\\\":0,\\\"lowPassCutoff\\\":22050,\\\"lowPassCutoffSweep\\\":0,\\\"highPassCutoff\\\":0,\\\"highPassCutoffSweep\\\":0,\\\"compression\\\":1,\\\"normalization\\\":true,\\\"amplification\\\":100}\",\"name\":\"New sound effect\"}}",
+        "name": "New sound effect",
+        "preloadAsMusic": false,
+        "preloadAsSound": false,
+        "preloadInCache": false,
+        "userAdded": true
       }
     ],
     "resourceFolders": []
@@ -946,7 +965,7 @@
         "gridColor": 10401023,
         "gridAlpha": 0.8,
         "snap": true,
-        "zoomFactor": 0.14039857806034434,
+        "zoomFactor": 0.3010461197182548,
         "windowMask": false
       },
       "objectsGroups": [
@@ -7273,10 +7292,25 @@
         "gridColor": 10401023,
         "gridAlpha": 0.8,
         "snap": false,
-        "zoomFactor": 0.5653158055126322,
+        "zoomFactor": 0.604083874998888,
         "windowMask": false
       },
-      "objectsGroups": [],
+      "objectsGroups": [
+        {
+          "name": "button",
+          "objects": [
+            {
+              "name": "host_server"
+            },
+            {
+              "name": "join_server"
+            },
+            {
+              "name": "untitled"
+            }
+          ]
+        }
+      ],
       "variables": [],
       "instances": [
         {
@@ -7465,7 +7499,7 @@
               "height": 106,
               "leftMargin": 16,
               "rightMargin": 16,
-              "texture": "Grey Button_Hovered.png",
+              "texture": "button (2).png",
               "tiled": true,
               "topMargin": 16,
               "width": 256
@@ -7475,7 +7509,7 @@
               "height": 106,
               "leftMargin": 16,
               "rightMargin": 16,
-              "texture": "Grey Button_Idle.png",
+              "texture": "button (2).png",
               "tiled": true,
               "topMargin": 16,
               "width": 256
@@ -7490,9 +7524,9 @@
               "textAlignment": "center",
               "characterSize": 60,
               "color": {
-                "b": 79,
-                "g": 72,
-                "r": 72
+                "b": 255,
+                "g": 255,
+                "r": 255
               },
               "content": {
                 "bold": false,
@@ -7512,7 +7546,7 @@
                 "font": "",
                 "textAlignment": "center",
                 "characterSize": 60,
-                "color": "72;72;79"
+                "color": "255;255;255"
               }
             },
             "Pressed": {
@@ -7520,7 +7554,7 @@
               "height": 106,
               "leftMargin": 16,
               "rightMargin": 16,
-              "texture": "Grey Button_Pressed.png",
+              "texture": "button (2).png",
               "tiled": true,
               "topMargin": 32,
               "width": 256
@@ -7548,7 +7582,7 @@
               "height": 106,
               "leftMargin": 16,
               "rightMargin": 16,
-              "texture": "Grey Button_Hovered.png",
+              "texture": "button (2).png",
               "tiled": true,
               "topMargin": 16,
               "width": 256
@@ -7558,7 +7592,7 @@
               "height": 106,
               "leftMargin": 16,
               "rightMargin": 16,
-              "texture": "Grey Button_Idle.png",
+              "texture": "button (2).png",
               "tiled": true,
               "topMargin": 16,
               "width": 256
@@ -7573,9 +7607,9 @@
               "textAlignment": "center",
               "characterSize": 60,
               "color": {
-                "b": 79,
-                "g": 72,
-                "r": 72
+                "b": 255,
+                "g": 255,
+                "r": 255
               },
               "content": {
                 "bold": false,
@@ -7595,7 +7629,7 @@
                 "font": "",
                 "textAlignment": "center",
                 "characterSize": 60,
-                "color": "72;72;79"
+                "color": "255;255;255"
               }
             },
             "Pressed": {
@@ -7603,7 +7637,7 @@
               "height": 106,
               "leftMargin": 16,
               "rightMargin": 16,
-              "texture": "Grey Button_Pressed.png",
+              "texture": "button (2).png",
               "tiled": true,
               "topMargin": 32,
               "width": 256
@@ -8059,7 +8093,7 @@
               "height": 106,
               "leftMargin": 16,
               "rightMargin": 16,
-              "texture": "Grey Button_Hovered.png",
+              "texture": "button (2).png",
               "tiled": true,
               "topMargin": 16,
               "width": 256
@@ -8069,7 +8103,7 @@
               "height": 106,
               "leftMargin": 16,
               "rightMargin": 16,
-              "texture": "Grey Button_Idle.png",
+              "texture": "button (2).png",
               "tiled": true,
               "topMargin": 16,
               "width": 256
@@ -8084,9 +8118,9 @@
               "textAlignment": "center",
               "characterSize": 60,
               "color": {
-                "b": 79,
-                "g": 72,
-                "r": 72
+                "b": 255,
+                "g": 255,
+                "r": 255
               },
               "content": {
                 "bold": false,
@@ -8106,7 +8140,7 @@
                 "font": "",
                 "textAlignment": "center",
                 "characterSize": 60,
-                "color": "72;72;79"
+                "color": "255;255;255"
               }
             },
             "Pressed": {
@@ -8114,7 +8148,7 @@
               "height": 106,
               "leftMargin": 16,
               "rightMargin": 16,
-              "texture": "Grey Button_Pressed.png",
+              "texture": "button (2).png",
               "tiled": true,
               "topMargin": 32,
               "width": 256
@@ -8588,6 +8622,111 @@
               "parameters": [
                 "\"https://github.com/Kravataf/tux3d\"",
                 ""
+              ]
+            }
+          ]
+        },
+        {
+          "disabled": true,
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "PanelSpriteButton::PanelSpriteButton::IsHovered"
+              },
+              "parameters": [
+                "host_server",
+                ""
+              ]
+            },
+            {
+              "type": {
+                "value": "BuiltinCommonInstructions::Once"
+              },
+              "parameters": []
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "PlaySound"
+              },
+              "parameters": [
+                "",
+                "New sound effect",
+                "",
+                "100",
+                "1"
+              ]
+            }
+          ]
+        },
+        {
+          "disabled": true,
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "PanelSpriteButton::PanelSpriteButton::IsHovered"
+              },
+              "parameters": [
+                "join_server",
+                ""
+              ]
+            },
+            {
+              "type": {
+                "value": "BuiltinCommonInstructions::Once"
+              },
+              "parameters": []
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "PlaySound"
+              },
+              "parameters": [
+                "",
+                "New sound effect",
+                "",
+                "100",
+                "1"
+              ]
+            }
+          ]
+        },
+        {
+          "disabled": true,
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "PanelSpriteButton::PanelSpriteButton::IsHovered"
+              },
+              "parameters": [
+                "untitled",
+                ""
+              ]
+            },
+            {
+              "type": {
+                "value": "BuiltinCommonInstructions::Once"
+              },
+              "parameters": []
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "PlaySound"
+              },
+              "parameters": [
+                "",
+                "New sound effect",
+                "",
+                "100",
+                "1"
               ]
             }
           ]
