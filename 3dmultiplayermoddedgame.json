@@ -956,7 +956,7 @@
         "gridColor": 10401023,
         "gridAlpha": 0.8,
         "snap": true,
-        "zoomFactor": 0.2550455473354422,
+        "zoomFactor": 0.11131182576837359,
         "windowMask": false
       },
       "objectsGroups": [
@@ -3040,6 +3040,12 @@
               "name": "PlayerState",
               "type": "structure",
               "children": [
+                {
+                  "folded": true,
+                  "name": "Col",
+                  "type": "boolean",
+                  "value": false
+                },
                 {
                   "folded": true,
                   "name": "Own",
@@ -6286,6 +6292,42 @@
                     "player",
                     "1038",
                     "164",
+                    ""
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::ForEach",
+              "object": "player",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "THNK::OnClientDisconnect"
+                  },
+                  "parameters": [
+                    "",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "THNK::UseLinkedObjects"
+                  },
+                  "parameters": [
+                    "RedHero",
+                    "player",
+                    "="
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "Delete"
+                  },
+                  "parameters": [
+                    "player",
                     ""
                   ]
                 }
