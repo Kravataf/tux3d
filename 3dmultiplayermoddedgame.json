@@ -106,45 +106,6 @@
       },
       {
         "alwaysLoaded": false,
-        "file": "assets/Grey Button_Hovered.png",
-        "kind": "image",
-        "metadata": "",
-        "name": "Grey Button_Hovered.png",
-        "smoothed": true,
-        "userAdded": false,
-        "origin": {
-          "identifier": "https://asset-resources.gdevelop.io/public-resources/Menu buttons/b43e0035dca80ea2fad5c5d65de926dae0185038e5f9cb21d5f20234f30d1c76_Grey Button_Hovered.png",
-          "name": "Grey Button_Hovered.png"
-        }
-      },
-      {
-        "alwaysLoaded": false,
-        "file": "assets/Grey Button_Idle.png",
-        "kind": "image",
-        "metadata": "",
-        "name": "Grey Button_Idle.png",
-        "smoothed": true,
-        "userAdded": false,
-        "origin": {
-          "identifier": "https://asset-resources.gdevelop.io/public-resources/Menu buttons/da7fc2efa0882eb5dfa0266315f2483c2f68d86a6751dc309ea9e9d0dd4759ba_Grey Button_Idle.png",
-          "name": "Grey Button_Idle.png"
-        }
-      },
-      {
-        "alwaysLoaded": false,
-        "file": "assets/Grey Button_Pressed.png",
-        "kind": "image",
-        "metadata": "",
-        "name": "Grey Button_Pressed.png",
-        "smoothed": true,
-        "userAdded": false,
-        "origin": {
-          "identifier": "https://asset-resources.gdevelop.io/public-resources/Menu buttons/49c35e14af0e1f7aae407455cb944de96328955870e5f1500f63723ad879a42e_Grey Button_Pressed.png",
-          "name": "Grey Button_Pressed.png"
-        }
-      },
-      {
-        "alwaysLoaded": false,
         "file": "assets/stk_generic_grassA.png2.png",
         "kind": "image",
         "metadata": "{\"extension\":\".png\",\"pskl\":{}}",
@@ -900,15 +861,6 @@
       },
       {
         "alwaysLoaded": false,
-        "file": "stktex_generic_earth_a.png",
-        "kind": "image",
-        "metadata": "",
-        "name": "stktex_generic_earth_a.png",
-        "smoothed": true,
-        "userAdded": true
-      },
-      {
-        "alwaysLoaded": false,
         "file": "assets/stktex_generic_earth_a.png2.png",
         "kind": "image",
         "metadata": "{\"extension\":\".png\",\"pskl\":{}}",
@@ -973,19 +925,6 @@
           "identifier": "https://asset-resources.gdevelop.io/public-resources/Settings UI/Slider/pixel art/848f861767e7ce4581dba9e122ee7bafeaca57987655cebe1f78ab31d1300f0f_Square White Slider Thumb.png",
           "name": "Square White Slider Thumb.png"
         }
-      },
-      {
-        "alwaysLoaded": false,
-        "file": "assets/LightGlow.png",
-        "kind": "image",
-        "metadata": "",
-        "name": "LightGlow.png",
-        "smoothed": true,
-        "userAdded": false,
-        "origin": {
-          "identifier": "https://asset-resources.gdevelop.io/public-resources/3D Particles/c17e2d500015e598624b763f4942b26e3aac96efca094cd20257a61e15b27fcb_LightGlow.png",
-          "name": "LightGlow.png"
-        }
       }
     ],
     "resourceFolders": []
@@ -1017,7 +956,7 @@
         "gridColor": 10401023,
         "gridAlpha": 0.8,
         "snap": true,
-        "zoomFactor": 0.39251611754883464,
+        "zoomFactor": 0.18923010380623476,
         "windowMask": false
       },
       "objectsGroups": [
@@ -3133,7 +3072,7 @@
               "PreviousFallSpeed": 0.19999992847454,
               "HasPressedJumpKey": false,
               "CanJump": true,
-              "ShouldStopAtZero": false,
+              "ShouldStopAtZero": true,
               "PreviousState": "Idle"
             },
             {
@@ -3180,13 +3119,13 @@
             }
           ],
           "content": {
-            "centerLocation": "ModelOrigin",
+            "centerLocation": "BottomCenterZ",
             "depth": 100,
             "height": 100,
             "keepAspectRatio": true,
             "materialType": "StandardWithoutMetalness",
             "modelResourceName": "tux.glb",
-            "originLocation": "ModelOrigin",
+            "originLocation": "BottomCenterZ",
             "rotationX": 90,
             "rotationY": 0,
             "rotationZ": 90,
