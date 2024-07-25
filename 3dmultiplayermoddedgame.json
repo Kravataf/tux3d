@@ -956,7 +956,7 @@
         "gridColor": 10401023,
         "gridAlpha": 0.8,
         "snap": true,
-        "zoomFactor": 0.09430311061498342,
+        "zoomFactor": 0.2550455473354422,
         "windowMask": false
       },
       "objectsGroups": [
@@ -1331,13 +1331,14 @@
         },
         {
           "angle": 0,
-          "customSize": false,
-          "height": 0,
+          "customSize": true,
+          "depth": 1,
+          "height": 17,
           "keepRatio": true,
           "layer": "hud",
           "name": "chat",
           "persistentUuid": "fd573fa9-91d1-4443-bb73-ec78521f17d1",
-          "width": 0,
+          "width": 400,
           "x": 0,
           "y": -800,
           "zOrder": 18,
@@ -5931,6 +5932,26 @@
                     "chatBG.Width()/4",
                     "chatBG.Height()/5"
                   ]
+                },
+                {
+                  "type": {
+                    "value": "TextObject::Text::SetFontSize"
+                  },
+                  "parameters": [
+                    "chat",
+                    "=",
+                    "roundTo(chat.Width()/20,0)"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "TextObject::WrappingWidth"
+                  },
+                  "parameters": [
+                    "chat",
+                    "=",
+                    "chatBG.Width()"
+                  ]
                 }
               ]
             },
@@ -5960,17 +5981,6 @@
                     "social.username",
                     "=",
                     "currentUsername.Text::Value()"
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "SetNumberObjectVariable"
-                  },
-                  "parameters": [
-                    "player",
-                    "PlayerState.z",
-                    "=",
-                    "player.Object3D::Z()"
                   ]
                 },
                 {
@@ -6178,8 +6188,8 @@
           "actions": [],
           "events": [
             {
-              "folded": true,
-              "type": "BuiltinCommonInstructions::Standard",
+              "type": "BuiltinCommonInstructions::ForEach",
+              "object": "player",
               "conditions": [
                 {
                   "type": {
@@ -6306,48 +6316,6 @@
                     "Text",
                     "=",
                     "lastMsg"
-                  ]
-                }
-              ]
-            },
-            {
-              "infiniteLoopWarning": true,
-              "type": "BuiltinCommonInstructions::While",
-              "whileConditions": [
-                {
-                  "type": {
-                    "value": "Scene3D::Base3DBehavior::Z"
-                  },
-                  "parameters": [
-                    "player",
-                    "Object3D",
-                    "<=",
-                    "-1000"
-                  ]
-                }
-              ],
-              "conditions": [
-                {
-                  "type": {
-                    "value": "THNK::UseLinkedObjects"
-                  },
-                  "parameters": [
-                    "RedHero",
-                    "player",
-                    "="
-                  ]
-                }
-              ],
-              "actions": [
-                {
-                  "type": {
-                    "value": "Scene3D::Base3DBehavior::SetZ"
-                  },
-                  "parameters": [
-                    "player",
-                    "Object3D",
-                    "=",
-                    "1000"
                   ]
                 }
               ]
@@ -7305,7 +7273,7 @@
         "gridColor": 10401023,
         "gridAlpha": 0.8,
         "snap": false,
-        "zoomFactor": 0.3925161175488233,
+        "zoomFactor": 0.3925161175488234,
         "windowMask": false
       },
       "objectsGroups": [
@@ -7485,6 +7453,23 @@
           "x": 483,
           "y": 39,
           "zOrder": 9,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 1,
+          "height": 59,
+          "keepRatio": true,
+          "layer": "",
+          "name": "note",
+          "persistentUuid": "11411392-ddd3-43cd-9677-cdf518804ef1",
+          "width": 565,
+          "x": 316,
+          "y": 522,
+          "zOrder": 10,
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
@@ -8167,6 +8152,47 @@
               "width": 256
             }
           }
+        },
+        {
+          "assetStoreId": "",
+          "bold": false,
+          "italic": false,
+          "name": "note",
+          "smoothed": true,
+          "type": "TextObject::Text",
+          "underlined": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "string": "note: P2P can leak one's IP address, and that is by design. play with strangers on your own risk!!",
+          "font": "",
+          "textAlignment": "center",
+          "characterSize": 20,
+          "color": {
+            "b": 0,
+            "g": 0,
+            "r": 255
+          },
+          "content": {
+            "bold": false,
+            "isOutlineEnabled": false,
+            "isShadowEnabled": false,
+            "italic": false,
+            "outlineColor": "255;255;255",
+            "outlineThickness": 2,
+            "shadowAngle": 90,
+            "shadowBlurRadius": 2,
+            "shadowColor": "0;0;0",
+            "shadowDistance": 4,
+            "shadowOpacity": 127,
+            "smoothed": true,
+            "underlined": false,
+            "text": "note: P2P can leak one's IP address, and that is by design. play with strangers on your own risk!!",
+            "font": "",
+            "textAlignment": "center",
+            "characterSize": 20,
+            "color": "255;0;0"
+          }
         }
       ],
       "objectsFolderStructure": {
@@ -8207,6 +8233,9 @@
           },
           {
             "objectName": "ST_font"
+          },
+          {
+            "objectName": "note"
           }
         ]
       },
@@ -8522,6 +8551,38 @@
                 "SceneWindowWidth()/2-host_server.Width()/2",
                 "=",
                 "SceneWindowHeight() / 2 - host_server.Height() - settings.Height() / 2"
+              ]
+            },
+            {
+              "type": {
+                "value": "MettreXY"
+              },
+              "parameters": [
+                "note",
+                "=",
+                "SceneWindowWidth()/2-note.Width()/2",
+                "=",
+                "SceneWindowHeight()/2+join_server.Height()/2+join_server.Height()+server_id.Height()*2"
+              ]
+            },
+            {
+              "type": {
+                "value": "TextObject::WrappingWidth"
+              },
+              "parameters": [
+                "note",
+                "=",
+                "background.Width()/5*3"
+              ]
+            },
+            {
+              "type": {
+                "value": "TextObject::Text::SetFontSize"
+              },
+              "parameters": [
+                "note",
+                "=",
+                "background.Width()/30"
               ]
             }
           ]
