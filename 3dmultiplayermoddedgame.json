@@ -447,13 +447,6 @@
         "userAdded": true
       },
       {
-        "file": "roofmesh4.glb",
-        "kind": "model3D",
-        "metadata": "",
-        "name": "roofmesh4.glb",
-        "userAdded": true
-      },
-      {
         "file": "free_-_skybox_basic_sky.glb",
         "kind": "model3D",
         "metadata": "",
@@ -932,6 +925,13 @@
         "metadata": "",
         "name": "sand_block.glb",
         "userAdded": true
+      },
+      {
+        "file": "roofmesh5.glb",
+        "kind": "model3D",
+        "metadata": "",
+        "name": "roofmesh5.glb",
+        "userAdded": true
       }
     ],
     "resourceFolders": []
@@ -963,7 +963,7 @@
         "gridColor": 10401023,
         "gridAlpha": 0.8,
         "snap": true,
-        "zoomFactor": 0.22336005893812277,
+        "zoomFactor": 0.22336005893812297,
         "windowMask": false
       },
       "objectsGroups": [
@@ -3493,7 +3493,7 @@
             "height": 100,
             "keepAspectRatio": true,
             "materialType": "StandardWithoutMetalness",
-            "modelResourceName": "roofmesh4.glb",
+            "modelResourceName": "roofmesh5.glb",
             "originLocation": "ModelOrigin",
             "rotationX": 180,
             "rotationY": 0,
