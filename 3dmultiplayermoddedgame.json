@@ -6123,16 +6123,6 @@
                 },
                 {
                   "type": {
-                    "value": "TextObject::Text::SetFontSize"
-                  },
-                  "parameters": [
-                    "chat",
-                    "=",
-                    "roundTo(chat.Width()/20,0)"
-                  ]
-                },
-                {
-                  "type": {
                     "value": "TextObject::WrappingWidth"
                   },
                   "parameters": [
