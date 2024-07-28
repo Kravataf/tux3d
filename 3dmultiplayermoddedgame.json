@@ -963,7 +963,7 @@
         "gridColor": 10401023,
         "gridAlpha": 0.8,
         "snap": true,
-        "zoomFactor": 0.13138826996360198,
+        "zoomFactor": 0.4335774304702555,
         "windowMask": false
       },
       "objectsGroups": [
@@ -3655,7 +3655,7 @@
               "type": "THNK::SynchronizedObject"
             }
           ],
-          "string": "player: message",
+          "string": "",
           "font": "",
           "textAlignment": "left",
           "characterSize": 15,
@@ -3678,7 +3678,7 @@
             "shadowOpacity": 127,
             "smoothed": true,
             "underlined": false,
-            "text": "player: message",
+            "text": "",
             "font": "",
             "textAlignment": "left",
             "characterSize": 15,
@@ -5887,13 +5887,12 @@
               "actions": [
                 {
                   "type": {
-                    "value": "THNK::SendMessage"
+                    "value": "SetStringVariable"
                   },
                   "parameters": [
-                    "",
-                    "\"chatMessage\"",
                     "lastMsg",
-                    ""
+                    "=",
+                    "currentUsername.Text::Value()+\": \"+enterMsg.Text::Value()"
                   ]
                 },
                 {
@@ -5906,12 +5905,24 @@
                 },
                 {
                   "type": {
-                    "value": "SetStringVariable"
+                    "value": "THNK::SendMessage"
                   },
                   "parameters": [
+                    "",
+                    "\"chatMessage\"",
                     "lastMsg",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "TextContainerCapability::TextContainerBehavior::SetValue"
+                  },
+                  "parameters": [
+                    "enterMsg",
+                    "Text",
                     "=",
-                    "currentUsername.Text::Value()+\": \"+enterMsg.Text::Value()"
+                    "\"\""
                   ]
                 }
               ]
