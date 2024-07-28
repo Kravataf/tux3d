@@ -963,7 +963,7 @@
         "gridColor": 10401023,
         "gridAlpha": 0.8,
         "snap": true,
-        "zoomFactor": 0.22336005893812297,
+        "zoomFactor": 0.13138826996360198,
         "windowMask": false
       },
       "objectsGroups": [
@@ -5876,6 +5876,12 @@
                     "sendMsg",
                     ""
                   ]
+                },
+                {
+                  "type": {
+                    "value": "BuiltinCommonInstructions::Once"
+                  },
+                  "parameters": []
                 }
               ],
               "actions": [
@@ -5895,7 +5901,7 @@
                     "value": "Wait"
                   },
                   "parameters": [
-                    "0.2"
+                    "0.02"
                   ]
                 },
                 {
@@ -6521,8 +6527,8 @@
                   "parameters": [
                     "chat",
                     "Text",
-                    "=",
-                    "lastMsg"
+                    "+",
+                    "lastMsg+NewLine()"
                   ]
                 }
               ]
